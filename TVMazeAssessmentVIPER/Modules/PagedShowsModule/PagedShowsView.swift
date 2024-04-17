@@ -31,20 +31,18 @@ struct PagedShowsView: View {
                     }
                 }
                 HStack(alignment: .center) {
-                    presenter.makePreviousPageButton()
+                    presenter.buildPreviousPageButton()
                     Spacer()
                     Text("\(presenter.selectedPage + 1)")
                     Spacer()
-                    presenter.makeNextPageButton()
+                    presenter.buildNextPageButton()
                 }
                 .padding(.horizontal, 32)
                 .frame(height: 40)
             }
         }
         .alert(presenter.errorMessage, isPresented: $presenter.showErrorMessage) {
-            Button("OK") {
-                presenter.showErrorMessage = false
-            }
+            presenter.buildAlertOKButton()
         }
         .onAppear {
             presenter.onAppear()
@@ -54,5 +52,11 @@ struct PagedShowsView: View {
 }
 
 #Preview {
-    PagedShowsView(presenter: PagedShowsPresenter(interactor: PagedShowsInterator(dataProvider: TVmazeAPIDataProvider())))
+    PagedShowsView(
+        presenter: PagedShowsPresenter(
+            interactor: PagedShowsInterator(
+                dataProvider: TVmazeAPIDataProvider()
+            )
+        )
+    )
 }

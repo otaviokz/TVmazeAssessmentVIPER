@@ -23,13 +23,13 @@ struct ContentView: View {
             }
             
             NavigationView {
-//                SearchShowsView(
-//                    presenter: SeatchShowsPresenter(
-//                        interactor: SearchShowsInterator(
-//                            dataProvider: TVmazeAPIDataProvider()
-//                        )
-//                    )
-//                )
+                ShowSearchView(
+                    presenter: ShowSearchPresenter(
+                        interactor: ShowSearchInteractor(
+                            dataProvider: TVmazeAPIDataProvider()
+                        )
+                    )
+                )
             }.tabItem {
                 Label("Search", systemImage: "magnifyingglass")
             }

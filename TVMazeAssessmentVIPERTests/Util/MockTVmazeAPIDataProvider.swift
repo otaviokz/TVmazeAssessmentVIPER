@@ -67,8 +67,8 @@ class MockTVmazeAPIDataProvider: TVmazeAPIDataProviderType {
     ///           Should either set either 'shows' to a non empty value when calling a func that fetch shows
     ///           or  'episodes' to a non empty value in the when calling a func that fetch episodes
     ///           or 'error'  to a non null value for both of the above cases
-    func executeAfterSleep(_ block: @escaping () -> Void) {
-        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 1.25) {
+    func executeAfterSleep(extraTime: Double = 0, _ block: @escaping () -> Void) {
+        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 1.25 + extraTime) {
             block()
         }
     }
