@@ -1,0 +1,24 @@
+{
+  "originHash" : "96f3f5abb0b93be5c4e52c9e14043dbb3ca1dfcce83bf70e0bff11c43fd1a43c",
+  "pins" : [
+    {
+      "identity" : "jsonhttpclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/otaviokz/JSONHTTPClient",
+      "state" : {
+        "revision" : "23c1671af60dcc61b447386db2fae27981a2fd6a",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "xctestblockexpectations",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:otaviokz/XCTestBlockExpectations.git",
+      "state" : {
+        "revision" : "c5754b2c8f807de6385a3dc11f4818a87cb56e38",
+        "version" : "0.9.0"
+      }
+    }
+  ],
+  "version" : 3
+}
