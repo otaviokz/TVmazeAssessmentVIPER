@@ -51,11 +51,13 @@
 		2BBC5C7D2BCFD4FF009AA598 /* Image+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBC5C7C2BCFD4FF009AA598 /* Image+Formatting.swift */; };
 		2BBC5C802BCFD573009AA598 /* String+RemoveHTMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBC5C7F2BCFD573009AA598 /* String+RemoveHTMLTags.swift */; };
 		2BBC5C822BCFD621009AA598 /* ShowDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBC5C812BCFD621009AA598 /* ShowDetailsRouter.swift */; };
-		2BBC5C862BCFDA27009AA598 /* JSONHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 2BBC5C852BCFDA27009AA598 /* JSONHTTPClient */; };
 		2BED59FB2BD0380D0081E963 /* EpisodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED59FA2BD0380D0081E963 /* EpisodeRowView.swift */; };
 		2BED59FE2BD05DFC0081E963 /* XCTest_BlockExpectations in Frameworks */ = {isa = PBXBuildFile; productRef = 2BED59FD2BD05DFC0081E963 /* XCTest_BlockExpectations */; };
 		2BED5A012BD060D90081E963 /* ShowDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED5A002BD060D90081E963 /* ShowDetailRouter.swift */; };
 		2BED5A032BD064470081E963 /* ShowDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED5A022BD064470081E963 /* ShowDetailsInteractorTests.swift */; };
+		2BED5A062BD06AE00081E963 /* EpisodeDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED5A052BD06AE00081E963 /* EpisodeDetailsRouter.swift */; };
+		2BED5A082BD06B150081E963 /* EpisodeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED5A072BD06B150081E963 /* EpisodeDetailsView.swift */; };
+		2BED5A0F2BD06E000081E963 /* JSONHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 2BED5A0E2BD06E000081E963 /* JSONHTTPClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,8 @@
 		2BED59FA2BD0380D0081E963 /* EpisodeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRowView.swift; sourceTree = "<group>"; };
 		2BED5A002BD060D90081E963 /* ShowDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailRouter.swift; sourceTree = "<group>"; };
 		2BED5A022BD064470081E963 /* ShowDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		2BED5A052BD06AE00081E963 /* EpisodeDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsRouter.swift; sourceTree = "<group>"; };
+		2BED5A072BD06B150081E963 /* EpisodeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BBC5C862BCFDA27009AA598 /* JSONHTTPClient in Frameworks */,
+				2BED5A0F2BD06E000081E963 /* JSONHTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +294,7 @@
 		2B5D285D2BCF603400B96591 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2BED5A042BD06A840081E963 /* EpisodeDetailsModule */,
 				2BBC5C752BCFC861009AA598 /* ShowDetailsModule */,
 				2B5D287A2BCFA64C00B96591 /* ShowSearchModule */,
 				2B5D285E2BCF609200B96591 /* PagedShowsModule */,
@@ -376,8 +381,17 @@
 			isa = PBXGroup;
 			children = (
 				2BED5A002BD060D90081E963 /* ShowDetailRouter.swift */,
+				2BED5A052BD06AE00081E963 /* EpisodeDetailsRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		2BED5A042BD06A840081E963 /* EpisodeDetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				2BED5A072BD06B150081E963 /* EpisodeDetailsView.swift */,
+			);
+			path = EpisodeDetailsModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,7 +411,7 @@
 			);
 			name = TVMazeAssessmentVIPER;
 			packageProductDependencies = (
-				2BBC5C852BCFDA27009AA598 /* JSONHTTPClient */,
+				2BED5A0E2BD06E000081E963 /* JSONHTTPClient */,
 			);
 			productName = TVMazeAssessmentVIPER;
 			productReference = 2B5D27FF2BCF454300B96591 /* TVMazeAssessmentVIPER.app */;
@@ -475,8 +489,8 @@
 			);
 			mainGroup = 2B5D27F62BCF454300B96591;
 			packageReferences = (
-				2BBC5C832BCFDA06009AA598 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */,
 				2BED59FC2BD05DA90081E963 /* XCRemoteSwiftPackageReference "XCTestBlockExpectations" */,
+				2BED5A0D2BD06DF70081E963 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */,
 			);
 			productRefGroup = 2B5D28002BCF454300B96591 /* Products */;
 			projectDirPath = "";
@@ -544,6 +558,8 @@
 				2B5D287E2BCFA68D00B96591 /* ShowSearchPresenter.swift in Sources */,
 				2BBC5C772BCFC895009AA598 /* ShowDetailsView.swift in Sources */,
 				2B5D28802BCFA69C00B96591 /* ShowSearchInteractor.swift in Sources */,
+				2BED5A062BD06AE00081E963 /* EpisodeDetailsRouter.swift in Sources */,
+				2BED5A082BD06B150081E963 /* EpisodeDetailsView.swift in Sources */,
 				2B5D283B2BCF510700B96591 /* Show.swift in Sources */,
 				2B5D28692BCF6B1300B96591 /* ShowRowView.swift in Sources */,
 				2BBC5C7B2BCFC8EE009AA598 /* ShowDetailsPresenter.swift in Sources */,
@@ -893,14 +909,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2BBC5C832BCFDA06009AA598 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/otaviokz/JSONHTTPClient";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
 		2BED59FC2BD05DA90081E963 /* XCRemoteSwiftPackageReference "XCTestBlockExpectations" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:otaviokz/XCTestBlockExpectations.git";
@@ -909,18 +917,26 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		2BED5A0D2BD06DF70081E963 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/otaviokz/JSONHTTPClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2BBC5C852BCFDA27009AA598 /* JSONHTTPClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2BBC5C832BCFDA06009AA598 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */;
-			productName = JSONHTTPClient;
-		};
 		2BED59FD2BD05DFC0081E963 /* XCTest_BlockExpectations */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2BED59FC2BD05DA90081E963 /* XCRemoteSwiftPackageReference "XCTestBlockExpectations" */;
 			productName = XCTest_BlockExpectations;
+		};
+		2BED5A0E2BD06E000081E963 /* JSONHTTPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BED5A0D2BD06DF70081E963 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */;
+			productName = JSONHTTPClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

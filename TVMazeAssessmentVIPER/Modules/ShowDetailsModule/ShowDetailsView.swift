@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShowDetailsView: View {
     @ObservedObject var presenter: ShowDetailsPresenter
+    private let router = EpisodeDetailsRouter()
     private let show: Show
     @State private var selectedSeason: Int = 0
     init(show: Show, presenter: ShowDetailsPresenter) {
@@ -73,7 +74,9 @@ struct ShowDetailsView: View {
                                         } else {
                                             Image(systemName: "arrow.right")
                                         }
-                                    }.frame(height: 30)
+                                    }
+                                    .frame(height: 30)
+                                    
                                     Spacer()
                                     Divider()
                                 }
@@ -92,12 +95,7 @@ struct ShowDetailsView: View {
                                 
                                 if selectedSeason == season.number {
                                     ForEach(season.episodes, id: \.id) { episode in
-                                        NavigationLink(destination: {
-                                            EmptyView()
-//                                            EpisodeDetailsView(episode: episode)
-                                        }, label: {
-                                            EpisodeRowView(episode: episode)
-                                        })
+                                        router.makeShowDetailLink(for: episode)
                                     }
                                 }
                             }
