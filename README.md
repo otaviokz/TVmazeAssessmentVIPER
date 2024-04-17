@@ -1,4 +1,4 @@
-# iOS Coding Challenge
+# iOS Coding Challenge (VIPER Version)
 
 ## Description
 
@@ -17,7 +17,6 @@ You can find the API ​[here](https://www.tvmaze.com/)​.
   <li>Allow users to search series by name</li>
   <li>The listing and search views must show at least the name and poster image of the series</li>
 </ul>
-
 
 <ul>
   <li>After clicking on a series, the application should show the details of the series, showing the following information:</li>
