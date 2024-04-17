@@ -20,7 +20,6 @@ protocol TVmazeAPIDataProviderType {
 }
 
 class TVmazeAPIDataProvider: TVmazeAPIDataProviderType {
-    static var shared = TVmazeAPIDataProvider()
     private let apiKey = "3Xjssgcr6q2W4MKfGhQ5Ut8tqwegAtjj"
     private var baseURL: URL {
         guard let baseURL = URL(string: "https://api.tvmaze.com") else {
