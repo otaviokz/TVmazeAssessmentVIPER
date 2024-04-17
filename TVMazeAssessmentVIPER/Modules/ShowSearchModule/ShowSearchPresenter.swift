@@ -1,24 +1,24 @@
 //
-//  PagedShowsPresenter.swift
+//  ShowSearchViewPresenter.swift
 //  TVMazeAssessmentVIPER
 //
-//  Created by Otávio Zabaleta on 16/04/2024.
+//  Created by Otávio Zabaleta on 17/04/2024.
 //
 
 import SwiftUI
 import Combine
 
-class PagedShowsPresenter: ObservableObject {
+class ShowSearchPresenter: ObservableObject {
+    @ObservedObject private var interactor: ShowSearchInteractor
     @Published var shows: [Show] = []
     @Published var isLoading: Bool = false
     @Published var showErrorMessage: Bool = false
     @Published var errorMessage: String = ""
-    @Published var showPreviousPageButton: Bool = false
-    @Published var selectedPage: Int = 0
-    private let interactor: PagedShowsInterator
+    @Published var searchText: String = ""
+    
     private var cancellables = Set<AnyCancellable>()
     
-    init(interactor: PagedShowsInterator) {
+    init(interactor: ShowSearchInteractor) {
         self.interactor = interactor
         
         interactor.$shows
@@ -33,36 +33,17 @@ class PagedShowsPresenter: ObservableObject {
             .assign(to: \.showErrorMessage, on: self)
             .store(in: &cancellables)
         
-        interactor.$selectedPage.map { $0 > 0 }
-            .assign(to: \.showPreviousPageButton, on: self)
-            .store(in: &cancellables)
-        
-        interactor.$selectedPage
-            .assign(to: \.selectedPage, on: self)
-            .store(in: &cancellables)
-        
         interactor.$errorMessage
             .assign(to: \.errorMessage, on: self)
             .store(in: &cancellables)
     }
     
-    func onAppear() {
-        interactor.onAppear()
-    }
-    
-    func buildPreviousPageButton() -> some View {
-        Button(action: interactor.fetchShowsForPreviousPage) {
-            Image(systemName: "arrow.left")
-        }
-        .disabled(selectedPage < 1)
-        .fontWeight(.bold)
-    }
-    
-    func buildNextPageButton() -> some View {
-        Button(action: interactor.fetchShowsForNextPage) {
-            Image(systemName: "arrow.right")
-        }
-        .fontWeight(.bold)
+    func buildTextView() -> some View {
+        TextField("Type at least 2 letters", text: $interactor.searchText)
+            .textFieldStyle(.roundedBorder)
+            .frame(height: 32)
+            .padding(.top, 12)
+            .padding(.horizontal, 16)
     }
     
     func linkBuilder<Content: View>(for show: Show, @ViewBuilder content: () -> Content) -> some View {
@@ -77,5 +58,14 @@ class PagedShowsPresenter: ObservableObject {
             interactor.errorMessage = ""
         }
     }
+    
+    func buildProgressView() -> some View {
+        if #available(iOS 17.0, *) {
+            ProgressView()
+                .controlSize(.extraLarge)
+        } else {
+            ProgressView()
+                .controlSize(.large)
+        }
+    }
 }
-
