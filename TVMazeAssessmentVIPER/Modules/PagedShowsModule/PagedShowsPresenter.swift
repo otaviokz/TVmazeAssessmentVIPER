@@ -16,6 +16,7 @@ class PagedShowsPresenter: ObservableObject {
     @Published var showPreviousPageButton: Bool = false
     @Published var selectedPage: Int = 0
     private let interactor: PagedShowsInterator
+    private let router = ShowDetailRouter()
     private var cancellables = Set<AnyCancellable>()
     
     init(interactor: PagedShowsInterator) {
@@ -66,9 +67,7 @@ class PagedShowsPresenter: ObservableObject {
     }
     
     func linkBuilder<Content: View>(for show: Show, @ViewBuilder content: () -> Content) -> some View {
-        NavigationLink(destination: content) {
-            ShowRowView(show: show)
-        }
+        router.makeShowDetailLink(for: show)
     }
     
     func buildAlertOKButton() -> some View {
