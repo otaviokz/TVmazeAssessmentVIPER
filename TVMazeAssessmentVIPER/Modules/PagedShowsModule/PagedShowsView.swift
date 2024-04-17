@@ -30,6 +30,9 @@ struct PagedShowsView: View {
                         }
                     }
                 }
+                .scrollIndicators(.hidden)
+                .listStyle(InsetGroupedListStyle())
+                
                 HStack(alignment: .center) {
                     presenter.buildPreviousPageButton()
                     Spacer()

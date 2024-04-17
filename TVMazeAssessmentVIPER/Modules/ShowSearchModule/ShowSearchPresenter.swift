@@ -15,6 +15,7 @@ class ShowSearchPresenter: ObservableObject {
     @Published var showErrorMessage: Bool = false
     @Published var errorMessage: String = ""
     @Published var searchText: String = ""
+    private let router = ShowDetailRouter()
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -47,9 +48,7 @@ class ShowSearchPresenter: ObservableObject {
     }
     
     func linkBuilder<Content: View>(for show: Show, @ViewBuilder content: () -> Content) -> some View {
-        NavigationLink(destination: content) {
-            ShowRowView(show: show)
-        }
+        router.makeShowDetailLink(for: show)
     }
     
     func buildAlertOKButton() -> some View {

@@ -20,3 +20,14 @@ extension Show {
         ended = "2015-09-10"
     }
 }
+
+extension Episode {
+    init() {
+        self.id = 185054
+        self.name = "The Enemy Within"
+        self.number = 16
+        self.seasonNumber = 13
+        self.summary = "<p>As the Dome in Chester's Mill comes down, the Resistance makes a final attempt to protect the outside world from the infected townspeople in the Kinship and their new queen.</p>"
+        self.images = Images(medium: "www.images.com/medium.png", original: "www.images.com/original.png")
+    }
+}

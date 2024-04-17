@@ -31,6 +31,7 @@ struct ShowSearchView: View {
                             }
                         }
                     }
+                    .listStyle(InsetGroupedListStyle())
                     .scrollIndicators(.hidden)
                     .cornerRadius(16)
                 }

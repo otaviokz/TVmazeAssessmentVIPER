@@ -16,29 +16,26 @@ struct ShowRowView: View {
                 .font(.headline)
             Spacer()
             if let url = show.mediumPosterURL {
-                if let poster = ImageCache.shared[url] {
-                    poster
-                        .resizable()
-                        .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                if let image = ImageCache.shared[url] {
+                    image
+                        .formattedForShowRowView()
                 } else {
                     AsyncImage(url: url) { phase in
                         switch phase {
                             case .success(let image):
                                 cacheImage(url: url, image: image)
-                                    .resizable()
+                                    .formattedForShowRowView()
                             default:
                                 Image(systemName: "photo")
-                                    .resizable()
+                                    .formattedForShowRowView()
                         }
                     }
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
             }
         }
-        .frame(height: 80)
-        .padding()
+        .frame(height: 82)
+        .padding(.horizontal)
+        .padding(.vertical, 4)
     }
     
     @MainActor func cacheImage(url: URL, image: Image) -> Image {
@@ -50,4 +47,14 @@ struct ShowRowView: View {
 #Preview {
     ShowRowView(show: Show())
         .previewLayout(.sizeThatFits)
+}
+
+private extension Image {
+    func formattedForShowRowView() -> some View {
+        self
+            .resizable()
+            .frame(width: 74, height: 74)
+            .scaledToFit()
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
 }
