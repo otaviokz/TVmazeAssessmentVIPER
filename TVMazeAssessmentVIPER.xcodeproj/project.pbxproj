@@ -11,7 +11,6 @@
 		2B5D28052BCF454300B96591 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28042BCF454300B96591 /* ContentView.swift */; };
 		2B5D28072BCF454400B96591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D28062BCF454400B96591 /* Assets.xcassets */; };
 		2B5D280A2BCF454400B96591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D28092BCF454400B96591 /* Preview Assets.xcassets */; };
-		2B5D28142BCF454400B96591 /* TVMazeAssessmentVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28132BCF454400B96591 /* TVMazeAssessmentVIPERTests.swift */; };
 		2B5D281E2BCF454400B96591 /* TVMazeAssessmentVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D281D2BCF454400B96591 /* TVMazeAssessmentVIPERUITests.swift */; };
 		2B5D28202BCF454400B96591 /* TVMazeAssessmentVIPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D281F2BCF454400B96591 /* TVMazeAssessmentVIPERUITestsLaunchTests.swift */; };
 		2B5D28312BCF50C000B96591 /* PosterHavingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28302BCF50C000B96591 /* PosterHavingType.swift */; };
@@ -41,8 +40,8 @@
 		2B5D286B2BCF6B6800B96591 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D286A2BCF6B6800B96591 /* ImageCache.swift */; };
 		2B5D286D2BCF6BBB00B96591 /* SampleEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D286C2BCF6BBB00B96591 /* SampleEntities.swift */; };
 		2B5D28702BCF762300B96591 /* PagedShowsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D286F2BCF762300B96591 /* PagedShowsInteractorTests.swift */; };
-		2B5D28722BCF780200B96591 /* XCTExpectation+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28712BCF780200B96591 /* XCTExpectation+Util.swift */; };
 		2B5D28742BCF84BC00B96591 /* MockTVmazeAPIDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28732BCF84BC00B96591 /* MockTVmazeAPIDataProvider.swift */; };
+		2B5D28792BCFA43F00B96591 /* XCTest+BlockExceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28782BCFA43F00B96591 /* XCTest+BlockExceptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 		2B5D28062BCF454400B96591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5D28092BCF454400B96591 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B5D280F2BCF454400B96591 /* TVMazeAssessmentVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeAssessmentVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B5D28132BCF454400B96591 /* TVMazeAssessmentVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeAssessmentVIPERTests.swift; sourceTree = "<group>"; };
 		2B5D28192BCF454400B96591 /* TVMazeAssessmentVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeAssessmentVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5D281D2BCF454400B96591 /* TVMazeAssessmentVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeAssessmentVIPERUITests.swift; sourceTree = "<group>"; };
 		2B5D281F2BCF454400B96591 /* TVMazeAssessmentVIPERUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeAssessmentVIPERUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -99,8 +97,8 @@
 		2B5D286A2BCF6B6800B96591 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		2B5D286C2BCF6BBB00B96591 /* SampleEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEntities.swift; sourceTree = "<group>"; };
 		2B5D286F2BCF762300B96591 /* PagedShowsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedShowsInteractorTests.swift; sourceTree = "<group>"; };
-		2B5D28712BCF780200B96591 /* XCTExpectation+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTExpectation+Util.swift"; sourceTree = "<group>"; };
 		2B5D28732BCF84BC00B96591 /* MockTVmazeAPIDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTVmazeAPIDataProvider.swift; sourceTree = "<group>"; };
+		2B5D28782BCFA43F00B96591 /* XCTest+BlockExceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+BlockExceptions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				2B5D286E2BCF75E900B96591 /* Interactors */,
-				2B5D28402BCF517300B96591 /* Document */,
 				2B5D283F2BCF511C00B96591 /* Entities */,
 				2B5D283E2BCF511400B96591 /* Util */,
-				2B5D28132BCF454400B96591 /* TVMazeAssessmentVIPERTests.swift */,
+				2B5D28402BCF517300B96591 /* Document */,
 			);
 			path = TVMazeAssessmentVIPERTests;
 			sourceTree = "<group>";
@@ -228,8 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				2B5D28552BCF51E700B96591 /* JSONLoader.swift */,
-				2B5D28712BCF780200B96591 /* XCTExpectation+Util.swift */,
 				2B5D28732BCF84BC00B96591 /* MockTVmazeAPIDataProvider.swift */,
+				2B5D28782BCFA43F00B96591 /* XCTest+BlockExceptions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -468,14 +465,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B5D28742BCF84BC00B96591 /* MockTVmazeAPIDataProvider.swift in Sources */,
-				2B5D28722BCF780200B96591 /* XCTExpectation+Util.swift in Sources */,
 				2B5D28522BCF51C500B96591 /* SeasonTests.swift in Sources */,
 				2B5D28512BCF51C500B96591 /* ShowContainerTests.swift in Sources */,
+				2B5D28792BCFA43F00B96591 /* XCTest+BlockExceptions.swift in Sources */,
 				2B5D28562BCF51E700B96591 /* JSONLoader.swift in Sources */,
 				2B5D28532BCF51C500B96591 /* ShowTests.swift in Sources */,
 				2B5D28702BCF762300B96591 /* PagedShowsInteractorTests.swift in Sources */,
 				2B5D28542BCF51C500B96591 /* EpisodeTests.swift in Sources */,
-				2B5D28142BCF454400B96591 /* TVMazeAssessmentVIPERTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
