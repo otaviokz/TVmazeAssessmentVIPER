@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "jsonhttpclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/otaviokz/JSONHTTPClient",
+      "state" : {
+        "revision" : "23c1671af60dcc61b447386db2fae27981a2fd6a",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

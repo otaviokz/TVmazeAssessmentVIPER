@@ -32,6 +32,8 @@
 		2B5D28532BCF51C500B96591 /* ShowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D284F2BCF51C500B96591 /* ShowTests.swift */; };
 		2B5D28542BCF51C500B96591 /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28502BCF51C500B96591 /* EpisodeTests.swift */; };
 		2B5D28562BCF51E700B96591 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D28552BCF51E700B96591 /* JSONLoader.swift */; };
+		2B5D285A2BCF562F00B96591 /* JSONHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 2B5D28592BCF562F00B96591 /* JSONHTTPClient */; };
+		2B5D285C2BCF56A700B96591 /* TVmazeAPIDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D285B2BCF56A700B96591 /* TVmazeAPIDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		2B5D284F2BCF51C500B96591 /* ShowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTests.swift; sourceTree = "<group>"; };
 		2B5D28502BCF51C500B96591 /* EpisodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
 		2B5D28552BCF51E700B96591 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		2B5D285B2BCF56A700B96591 /* TVmazeAPIDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeAPIDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5D285A2BCF562F00B96591 /* JSONHTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +136,7 @@
 			children = (
 				2B5D282D2BCF506000B96591 /* Entities */,
 				2B5D282C2BCF505900B96591 /* View */,
+				2B5D28572BCF550100B96591 /* DataSources */,
 				2B5D28022BCF454300B96591 /* TVMazeAssessmentVIPERApp.swift */,
 				2B5D28062BCF454400B96591 /* Assets.xcassets */,
 				2B5D28082BCF454400B96591 /* Preview Content */,
@@ -229,6 +234,14 @@
 			path = Document;
 			sourceTree = "<group>";
 		};
+		2B5D28572BCF550100B96591 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D285B2BCF56A700B96591 /* TVmazeAPIDataProvider.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +258,9 @@
 			dependencies = (
 			);
 			name = TVMazeAssessmentVIPER;
+			packageProductDependencies = (
+				2B5D28592BCF562F00B96591 /* JSONHTTPClient */,
+			);
 			productName = TVMazeAssessmentVIPER;
 			productReference = 2B5D27FF2BCF454300B96591 /* TVMazeAssessmentVIPER.app */;
 			productType = "com.apple.product-type.application";
@@ -317,6 +333,9 @@
 				Base,
 			);
 			mainGroup = 2B5D27F62BCF454300B96591;
+			packageReferences = (
+				2B5D28582BCF562F00B96591 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */,
+			);
 			productRefGroup = 2B5D28002BCF454300B96591 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5D285C2BCF56A700B96591 /* TVmazeAPIDataProvider.swift in Sources */,
 				2B5D28052BCF454300B96591 /* ContentView.swift in Sources */,
 				2B5D283C2BCF510700B96591 /* Episode.swift in Sources */,
 				2B5D28312BCF50C000B96591 /* PosterHavingType.swift in Sources */,
@@ -708,6 +728,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B5D28582BCF562F00B96591 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/otaviokz/JSONHTTPClient";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B5D28592BCF562F00B96591 /* JSONHTTPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B5D28582BCF562F00B96591 /* XCRemoteSwiftPackageReference "JSONHTTPClient" */;
+			productName = JSONHTTPClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B5D27F72BCF454300B96591 /* Project object */;
 }
