@@ -25,7 +25,6 @@ final class SeasonTests: XCTestCase {
         
         // THEN
         XCTAssertEqual(seasons.count, 3)
-        
         XCTAssertEqual(s01.number, 1)
         XCTAssertEqual(s01.episodes.count, 13)
         for episode in s01.episodes {
@@ -44,12 +43,5 @@ final class SeasonTests: XCTestCase {
         XCTAssertEqual(s03.number, 3)
         
     }
-
-//    func testPerformanceExample() throws {
-//        // This is an example of a performance test case.
-//        self.measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
 
 }

@@ -9,8 +9,21 @@ import Foundation
 @testable import TVMazeAssessmentVIPER
 
 class MockTVmazeAPIDataProvider: TVmazeAPIDataProviderType {
+    func fetchEpisodes(showId: Int) async throws -> [TVMazeAssessmentVIPER.Episode] {
+        while true {
+            if let error = error {
+                throw error
+            } else if let episodes = episodes, !episodes.isEmpty {
+                return episodes
+            }
+            
+            // Sleep 1 second when there's no episodes to return ot error to throw
+            sleep(1)
+        }
+    }
+    
     var episodes: [Episode]?
-    func fetchEpisodes(showId: Int) async throws -> [Episode] {
+    func fetchEpisodxes(showId: Int) async throws -> [Episode] {
         while true {
             if let error = error {
                 throw error
